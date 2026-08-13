@@ -1,10 +1,10 @@
 /* ==========================================
-   PHARMA2TECH FINAL MOBILE RESPONSIVE FIX
+   PHARMA2TECH MASTER MOBILE RESPONSIVE FIX
 ========================================== */
 
 @media screen and (max-width: 900px) {
 
-    /* १. ग्लोबल व्हिड्थ आणि ओव्हरफ्लो फिक्स */
+    /* १. Global Mobile Reset */
     html, body {
         width: 100% !important;
         max-width: 100vw !important;
@@ -17,7 +17,7 @@
         box-sizing: border-box !important;
     }
 
-    /* २. हेडर, लोगो आणि टेक्स्ट अलाइनमेंट */
+    /* २. Header & Brand Navigation */
     header, .nav-container {
         display: flex !important;
         flex-direction: column !important;
@@ -39,13 +39,13 @@
     }
 
     .brand-logo, img[alt*="Logo"] {
-        max-height: 42px !important;
+        max-height: 40px !important;
         width: auto !important;
         margin-bottom: 6px !important;
     }
 
     .logo-title {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
         line-height: 1.2 !important;
     }
 
@@ -54,7 +54,7 @@
         letter-spacing: 0.5px !important;
     }
 
-    /* ३. स्वाईप-फ्रेंडली नेव्हिगेशन टॅब्स */
+    /* ३. Horizontal Swipe Nav Menu */
     nav, nav ul, .nav-links {
         display: flex !important;
         flex-direction: row !important;
@@ -73,12 +73,12 @@
     }
 
     nav ul li a {
-        font-size: 0.82rem !important;
-        padding: 6px 14px !important;
+        font-size: 0.8rem !important;
+        padding: 6px 12px !important;
         border-radius: 20px !important;
         background: #F1F5F9 !important;
         color: #334155 !important;
-        display: block !important;
+        display: inline-block !important;
     }
 
     .btn-guidance {
@@ -88,7 +88,7 @@
         padding: 8px 18px !important;
     }
 
-    /* ४. ANNOUNCEMENT BAR COMPLETE OVERLAP FIX */
+    /* ४. Announcement Bar Fix (Badge Clean & Marquee Clear) */
     .announcement-bar, [class*="announcement"] {
         display: flex !important;
         flex-direction: row !important;
@@ -96,73 +96,72 @@
         justify-content: flex-start !important;
         width: 100% !important;
         background: #0f172a !important;
-        padding: 6px 10px !important;
+        padding: 6px 8px !important;
         overflow: hidden !important;
-        position: relative !important;
         box-sizing: border-box !important;
     }
 
-    .announcement-bar .badge, [class*="announcement"] .badge, [class*="announcement"] > div:first-child {
-        position: relative !important;
-        z-index: 2 !important;
-        flex-shrink: 0 !important;
+    .announcement-bar .badge, [class*="announcement"] .badge {
         font-size: 0.65rem !important;
         padding: 4px 8px !important;
-        margin-right: 10px !important;
+        margin-right: 8px !important;
+        flex-shrink: 0 !important;
         white-space: nowrap !important;
     }
 
-    .announcement-bar marquee, .announcement-bar span, [class*="announcement"] p {
-        position: relative !important;
-        z-index: 1 !important;
+    .announcement-bar marquee, .announcement-bar span {
         font-size: 0.75rem !important;
         white-space: nowrap !important;
-        margin: 0 !important;
-        padding: 0 !important;
     }
 
-    /* ५. HOMEPAGE SLIDER CARDS LAYOUT */
-    .hero-slider, .slider-container, .slides-wrapper, .swiper-wrapper, .slider-track {
+    /* ५. Mobile Horizontal Scroll Slider (Desktop Style Horizontal View) */
+    .slider-container, .hero-slider, .slides-wrapper, .swiper-wrapper, .slider-track {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        width: 100% !important;
+        padding: 10px 0 !important;
+        gap: 15px !important;
+        scrollbar-width: none !important;
+    }
+
+    .slider-container::-webkit-scrollbar, .slides-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .slide, .card, .webinar-card, .slide-card, .hero-card, div[class*="slide"] {
+        flex: 0 0 90% !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        scroll-snap-align: center !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        padding: 20px 14px !important;
         display: flex !important;
         flex-direction: column !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        gap: 20px !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
+        justify-content: space-between !important;
     }
 
-    .slide, .card, .webinar-card, .slide-card, .hero-card, div[class*="card"] {
-        width: 94% !important;
-        max-width: 94% !important;
-        min-width: 94% !important;
-        margin: 10px auto !important;
-        box-sizing: border-box !important;
-        padding: 16px 12px !important;
-        display: block !important;
-        float: none !important;
-        position: relative !important;
-    }
-
-    /* ६. HIDE CAROUSEL ARROWS ON MOBILE (Cards are stacked) */
+    /* ६. Hide Desktop Overlay Arrows to avoid Overlap */
     .slider-arrow, .prev-btn, .next-btn, .carousel-control-prev, .carousel-control-next,
     button[class*="prev"], button[class*="next"], .swiper-button-next, .swiper-button-prev {
         display: none !important;
     }
 
-    /* ७. TYPOGRAPHY AND BUTTONS */
-    h1, .slide h1, .card h1, h2, .slide h2, .card h2, h3, .slide h3 {
+    /* ७. Text & Button Alignment inside Cards */
+    h1, .slide h1, .card h1, h2, .slide h2, .card h2, h3 {
         font-size: 1.1rem !important;
         line-height: 1.35 !important;
-        word-break: break-word !important;
-        white-space: normal !important;
         text-align: center !important;
-        margin: 10px 0 !important;
-        padding: 0 5px !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        margin: 8px 0 !important;
     }
 
-    p, .slide p, .card p, .slide-card p, .webinar-card p {
-        font-size: 0.85rem !important;
+    p, .slide p, .card p {
+        font-size: 0.82rem !important;
         line-height: 1.4 !important;
         text-align: center !important;
         margin-bottom: 12px !important;
@@ -173,8 +172,7 @@
         padding: 4px 10px !important;
         margin: 0 auto 8px auto !important;
         display: inline-block !important;
-        max-width: 100% !important;
-        white-space: normal !important;
+        text-align: center !important;
     }
 
-} /* <-- संपूर्ण मोबाईल CSS फक्त इथे एकाच कंसाने बंद होतो */
+}
