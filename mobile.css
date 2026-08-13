@@ -1,85 +1,105 @@
 /* ==========================================
-   PHARMA2TECH EXACT MOBILE OVERRIDE CSS
+   PHARMA2TECH HEADER & TEXT TYPOGRAPHY FIX
 ========================================== */
 
 @media screen and (max-width: 900px) {
-    
-    /* 1. बॉडी आणि पेज ओव्हरफ्लो फिक्स */
-    html, body {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
+
+    /* १. हेडर आणि लोगो अलाइनमेंट */
+    header {
+        padding: 10px 0 !important;
     }
 
-    /* 2. हेडर बार एकाखाली एक (Vertical Column) सेट करणे */
-    header, nav, .navbar, .nav-container, .header-container {
+    .nav-container {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        width: 100% !important;
-        padding: 10px 5px !important;
-        height: auto !important;
-        position: relative !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 0 12px !important;
     }
 
-    /* 3. लोगो आणि ब्रँड नाव सेंटर करणे */
-    .brand, .logo, .logo-container, header a:first-child {
+    .brand-box {
         display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        margin-bottom: 8px !important;
-        width: 100% !important;
+        text-align: center !important;
+        gap: 5px !important;
     }
 
-    .brand img, .logo img {
-        height: 35px !important;
+    .brand-logo {
+        height: 40px !important;
         width: auto !important;
     }
 
-    /* 4. 'Get Free Guidance' बटण स्वतंत्र खाली आणणे */
-    .btn-guidance, header .btn, header a.btn, [class*="guidance"] {
-        position: relative !important;
-        top: 0 !important;
-        right: 0 !important;
-        margin: 5px auto !important;
-        display: inline-block !important;
-        font-size: 0.8rem !important;
-        padding: 8px 16px !important;
-        width: fit-content !important;
-    }
-
-    /* 5. नेव्हिगेशन लिंक्स आणि टॅब्स स्वाईप-फ्रेंडली करणे */
-    nav ul, .nav-links, .menu {
+    .brand-text {
         display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        width: 100% !important;
-        padding: 10px 5px !important;
-        gap: 10px !important;
-        -webkit-overflow-scrolling: touch;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
-    nav ul li, .nav-links a {
-        display: inline-block !important;
-        font-size: 0.85rem !important;
-    }
-
-    /* 6. वेबिनार कार्ड आणि मजकूर अ‍ॅडजस्ट करणे */
-    .hero-slider, .card, .container {
-        width: 92% !important;
-        margin: 10px auto !important;
-        box-sizing: border-box !important;
-    }
-
-    h1, h2 {
+    /* २. ब्रँड टायटल आणि स्लोगन (Sharp Typography) */
+    .logo-title {
         font-size: 1.2rem !important;
-        line-height: 1.4 !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.3px !important;
+        line-height: 1.1 !important;
+        color: #0F172A !important;
     }
 
-    p {
-        font-size: 0.85rem !important;
+    .logo-title span {
+        color: #2563EB !important;
+    }
+
+    .logo-slogan {
+        font-size: 0.58rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.6px !important;
+        text-transform: uppercase !important;
+        color: #059669 !important;
+        margin-top: 3px !important;
+    }
+
+    /* ३. नेव्हिगेशन टॅब्स (Clean Pill Buttons) */
+    nav {
+        width: 100% !important;
+        margin-top: 4px !important;
+    }
+
+    nav ul {
+        display: flex !important;
+        gap: 8px !important;
+        padding: 6px 10px !important;
+        align-items: center !important;
+    }
+
+    nav ul li a {
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        color: #334155 !important;
+        background: #F1F5F9 !important;
+        padding: 6px 14px !important;
+        border-radius: 20px !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+        border: 1px solid #E2E8F0 !important;
+    }
+
+    /* अ‍ॅक्टिव्ह टॅबचा रंग */
+    nav ul li a.active {
+        background: #2563EB !important;
+        color: #FFFFFF !important;
+        border-color: #2563EB !important;
+    }
+
+    /* ४. 'Get Free Guidance' बटण */
+    .btn-guidance {
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        padding: 8px 18px !important;
+        letter-spacing: 0.3px !important;
+        border-radius: 25px !important;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
     }
 }
