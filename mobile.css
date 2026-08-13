@@ -88,10 +88,10 @@
         padding: 8px 18px !important;
     }
 
-    /* ४. सर्वात महत्त्वाचा फिक्स: स्लायडर कार्ड्स एकाखाली एक आणणे */
+    /* ४. स्लायडर कार्ड्स एकाखाली एक आणणे */
     .hero-slider, .slider-container, .slides-wrapper, .swiper-wrapper {
         display: flex !important;
-        flex-direction: column !important; /* २ कॉलम्स बंद करून १ कॉलम करणे */
+        flex-direction: column !important;
         width: 100% !important;
         gap: 20px !important;
     }
@@ -106,7 +106,7 @@
         display: block !important;
     }
 
-    /* ५. मोबाईलसाठी टेक्स्ट आणि हेडिंग्जची साईझ ॲडजस्ट करणे */
+    /* ५. मोबाईलसाठी टेक्स्ट आणि हेडिंग्जची साईझ */
     h1, .slide h1, .card h1, h2, .slide h2, .card h2 {
         font-size: 1.15rem !important;
         line-height: 1.35 !important;
@@ -131,4 +131,48 @@
         max-width: 100% !important;
         white-space: normal !important;
     }
-}
+
+    /* ६. HOMEPAGE SPECIFIC CARDS FIX */
+    .slider-container, 
+    .hero-slider, 
+    .slides-wrapper, 
+    .slider-track,
+    div[class*="slide"] {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    .slide-card, 
+    .webinar-card, 
+    .hero-card,
+    div[class*="card"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 10px 0 !important;
+        padding: 16px 12px !important;
+        float: none !important;
+    }
+
+    .slide-card h1, .slide-card h2, .slide-card h3,
+    .webinar-card h1, .webinar-card h2, .webinar-card h3 {
+        font-size: 1.15rem !important;
+        line-height: 1.4 !important;
+        white-space: normal !important;
+        text-align: center !important;
+        word-break: break-word !important;
+    }
+
+    .slide-card p, .webinar-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+    }
+
+} /* <-- संपूर्ण मोबाईल CSS फक्त इथे एकाच कंसाने बंद होतो */
