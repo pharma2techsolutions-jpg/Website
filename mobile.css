@@ -174,5 +174,57 @@
         line-height: 1.4 !important;
         text-align: center !important;
     }
+/* ==========================================
+       1. ANNOUNCEMENT BAR MOBILE FIX
+    ========================================== */
+    .announcement-bar, [class*="announcement"] {
+        font-size: 0.75rem !important;
+        padding: 6px 8px !important;
+        height: auto !important;
+        min-height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        overflow: hidden !important;
+    }
 
+    .announcement-bar .badge, [class*="announcement"] .badge {
+        font-size: 0.65rem !important;
+        padding: 3px 8px !important;
+        margin-right: 6px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .announcement-bar marquee, .announcement-bar span {
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* ==========================================
+       2. CAREER CATALYST SLIDE & ARROWS FIX
+    ========================================== */
+    .slide, [class*="slide"] {
+        padding: 20px 12px 15px 12px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .slide h1, .slide h2, .slide h3,
+    .slide-card h1, .slide-card h2, .slide-card h3 {
+        font-size: 1.05rem !important;
+        line-height: 1.35 !important;
+        padding: 0 10px !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+    }
+
+    .slider-arrow, .prev-btn, .next-btn, .carousel-control-prev, .carousel-control-next,
+    button[class*="prev"], button[class*="next"] {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.8rem !important;
+        opacity: 0.7 !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+    }
 } /* <-- संपूर्ण मोबाईल CSS फक्त इथे एकाच कंसाने बंद होतो */
