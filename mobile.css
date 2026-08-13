@@ -1,75 +1,62 @@
 /* ==========================================
-   PHARMA2TECH OVERFLOW & VIEWPORT LOCK FIX
+   PHARMA2TECH ABSOLUTE MOBILE OVERRIDE
 ========================================== */
 
-@media screen and (max-width: 900px) {
+/* १. सर्व घटकांना सक्तीने स्क्रीनच्या चौकटीत बसवणे */
+*, *::before, *::after {
+    box-sizing: border-box !important;
+    max-width: 100vw !important;
+}
 
-    /* १. बॉडी आणि HTML ची रुंदी १००% वर लॉक करणे (झूम आउट रोखणे) */
-    html, body {
-        width: 100% !important;
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-        position: relative !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+/* २. बॉडी आणि एचटीएमएलची रुंदी १००% लॉक करणे (झूम आउट रोखणे) */
+html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
-    /* २. हेडर आणि नेव्हिगेशन विड्थ मर्यादित करणे */
-    header, .nav-container, nav {
-        width: 100% !important;
-        max-width: 100vw !important;
-        box-sizing: border-box !important;
-        overflow-x: hidden !important;
-    }
+/* ३. हेडर आणि नेव्हिगेशन स्क्रीनमध्ये बंदिस्त करणे */
+header, nav, .nav-container, .navbar, .header {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 10px 5px !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
 
-    /* ३. टॅब्सची पट्टी स्क्रीनच्या बाहेर न जाता मोबाईलच्या आतच स्क्रोल होणे */
-    nav ul, .nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: auto !important; /* टॅब्स आतच स्क्रोल होतील */
-        white-space: nowrap !important;
-        box-sizing: border-box !important;
-        padding: 8px 10px !important;
-        margin: 0 !important;
-        gap: 8px !important;
-        -webkit-overflow-scrolling: touch;
-    }
+/* ४. टॅब्सची पट्टी - डावीकडे-उजवीकडे स्वाईप-फ्रेंडली करणे */
+nav ul, .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: auto !important; /* फक्त टॅब्स आतल्या आत स्क्रोल होतील */
+    white-space: nowrap !important;
+    padding: 8px 10px !important;
+    margin: 0 !important;
+    gap: 8px !important;
+    -webkit-overflow-scrolling: touch;
+}
 
-    nav ul li {
-        display: inline-block !important;
-        flex-shrink: 0 !important; /* टॅब्स चपट्या होणार नाहीत */
-    }
+nav ul li {
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+}
 
-    nav ul li a {
-        font-size: 0.82rem !important;
-        padding: 6px 14px !important;
-        border-radius: 20px !important;
-        background: #F1F5F9 !important;
-        color: #334155 !important;
-        display: block !important;
-    }
+/* ५. कोणताही एलिमेंट/इमेज विड्थच्या बाहेर न जाणे */
+img, video, iframe, table, .container, .row, section, div {
+    max-width: 100% !important;
+    height: auto !important;
+}
 
-    /* ४. लोगो आणि बटण सेंटर अलाइन करणे */
-    .brand-box, .logo-wrapper, .brand-text {
-        margin: 0 auto !important;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .btn-guidance {
-        margin: 8px auto !important;
-        display: inline-block !important;
-    }
-
-    /* ५. मुख्य कार्ड्स आणि सेक्शन्स पूर्ण रुंदीत फिट करणे */
-    .container, .card, .hero-slider, section, .section {
-        width: 92% !important;
-        max-width: 92% !important;
-        margin: 15px auto !important;
-        box-sizing: border-box !important;
-    }
+/* ६. मुख्य सेक्शन्स आणि वेबिनार कार्ड */
+.hero-slider, .card, .section, .container {
+    width: 95% !important;
+    margin: 10px auto !important;
 }
