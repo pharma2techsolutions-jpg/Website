@@ -1,62 +1,134 @@
 /* ==========================================
-   PHARMA2TECH ABSOLUTE MOBILE OVERRIDE
+   PHARMA2TECH FINAL MOBILE RESPONSIVE FIX
 ========================================== */
 
-/* १. सर्व घटकांना सक्तीने स्क्रीनच्या चौकटीत बसवणे */
-*, *::before, *::after {
-    box-sizing: border-box !important;
-    max-width: 100vw !important;
-}
+@media screen and (max-width: 900px) {
 
-/* २. बॉडी आणि एचटीएमएलची रुंदी १००% लॉक करणे (झूम आउट रोखणे) */
-html, body {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    position: relative !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
+    /* १. ग्लोबल व्हिड्थ आणि ओव्हरफ्लो फिक्स */
+    html, body {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
-/* ३. हेडर आणि नेव्हिगेशन स्क्रीनमध्ये बंदिस्त करणे */
-header, nav, .nav-container, .navbar, .header {
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding: 10px 5px !important;
-    overflow-x: hidden !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
+    *, *::before, *::after {
+        box-sizing: border-box !important;
+    }
 
-/* ४. टॅब्सची पट्टी - डावीकडे-उजवीकडे स्वाईप-फ्रेंडली करणे */
-nav ul, .nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: auto !important; /* फक्त टॅब्स आतल्या आत स्क्रोल होतील */
-    white-space: nowrap !important;
-    padding: 8px 10px !important;
-    margin: 0 !important;
-    gap: 8px !important;
-    -webkit-overflow-scrolling: touch;
-}
+    /* २. हेडर, लोगो आणि टेक्स्ट अलाइनमेंट */
+    header, .nav-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        padding: 10px 8px !important;
+        text-align: center !important;
+    }
 
-nav ul li {
-    display: inline-block !important;
-    flex-shrink: 0 !important;
-}
+    .brand-box, .logo-wrapper, .brand-text {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
 
-/* ५. कोणताही एलिमेंट/इमेज विड्थच्या बाहेर न जाणे */
-img, video, iframe, table, .container, .row, section, div {
-    max-width: 100% !important;
-    height: auto !important;
-}
+    .brand-logo, img[alt*="Logo"] {
+        max-height: 42px !important;
+        width: auto !important;
+        margin-bottom: 6px !important;
+    }
 
-/* ६. मुख्य सेक्शन्स आणि वेबिनार कार्ड */
-.hero-slider, .card, .section, .container {
-    width: 95% !important;
-    margin: 10px auto !important;
+    .logo-title {
+        font-size: 1.25rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .logo-slogan {
+        font-size: 0.6rem !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    /* ३. स्वाईप-फ्रेंडली नेव्हिगेशन टॅब्स */
+    nav, nav ul, .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        padding: 6px 10px !important;
+        gap: 8px !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none !important;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    nav ul li a {
+        font-size: 0.82rem !important;
+        padding: 6px 14px !important;
+        border-radius: 20px !important;
+        background: #F1F5F9 !important;
+        color: #334155 !important;
+        display: block !important;
+    }
+
+    .btn-guidance {
+        margin: 10px auto !important;
+        display: inline-block !important;
+        font-size: 0.85rem !important;
+        padding: 8px 18px !important;
+    }
+
+    /* ४. सर्वात महत्त्वाचा फिक्स: स्लायडर कार्ड्स एकाखाली एक आणणे */
+    .hero-slider, .slider-container, .slides-wrapper, .swiper-wrapper {
+        display: flex !important;
+        flex-direction: column !important; /* २ कॉलम्स बंद करून १ कॉलम करणे */
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .slide, .card, .webinar-card, [class*="card"] {
+        width: 92% !important;
+        max-width: 92% !important;
+        min-width: 92% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        padding: 15px !important;
+        display: block !important;
+    }
+
+    /* ५. मोबाईलसाठी टेक्स्ट आणि हेडिंग्जची साईझ ॲडजस्ट करणे */
+    h1, .slide h1, .card h1, h2, .slide h2, .card h2 {
+        font-size: 1.15rem !important;
+        line-height: 1.35 !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+        text-align: center !important;
+        margin: 10px 0 !important;
+    }
+
+    p, .slide p, .card p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+    }
+
+    .badge, [class*="badge"], .tag {
+        font-size: 0.7rem !important;
+        padding: 4px 10px !important;
+        margin: 0 auto 8px auto !important;
+        display: inline-block !important;
+        max-width: 100% !important;
+        white-space: normal !important;
+    }
 }
