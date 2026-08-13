@@ -1055,7 +1055,7 @@
         sliderElement.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
         sliderElement.addEventListener('mouseleave', () => autoSlideInterval = setInterval(nextSlide, 5000));
 
-        // Improved Scroll Observer Animation
+       // Improved Scroll Observer Animation
         const observerOptions = {
             root: null,
             threshold: 0.1
@@ -1078,32 +1078,47 @@
         const submitBtn = document.getElementById('submitBtn');
         const responseMsg = document.getElementById('responseMsg');
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            submitBtn.disabled = true;
-            submitBtn.innerText = "Submitting...";
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Submitting...";
 
-            const formData = new FormData(form);
+                const formData = new FormData(form);
 
-            fetch(SCRIPT_URL, {
-                method: 'POST',
-                body: formData
-            })
-            .then(res => {
-                responseMsg.style.display = "block";
-                responseMsg.style.color = "#059669";
-                responseMsg.innerText = "Application Submitted Successfully!";
-                form.reset();
-                submitBtn.disabled = false;
-                submitBtn.innerText = "Submit Application";
-            })
-            .catch(err => {
-                responseMsg.style.display = "block";
-                responseMsg.style.color = "#DC2626";
-                responseMsg.innerText = "Error submitting form. Please try again.";
-                console.error(err);
-                submitBtn.disabled = false;
-                submitBtn.innerText = "Submit Application";
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(res => {
+                    responseMsg.style.display = "block";
+                    responseMsg.style.color = "#059669";
+                    responseMsg.innerText = "Application Submitted Successfully!";
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Submit Application";
+                })
+                .catch(err => {
+                    responseMsg.style.display = "block";
+                    responseMsg.style.color = "#DC2626";
+                    responseMsg.innerText = "Error submitting form. Please try again.";
+                    console.error(err);
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Submit Application";
+                });
+            });
+        }
+
+        // ✅ Navigation Double-Click / Wrong Redirect Bug Fix
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.endsWith('.html')) {
+                        e.stopPropagation();
+                        window.location.href = href;
+                    }
+                });
             });
         });
     </script>
