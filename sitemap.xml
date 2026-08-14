@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://pharma2tech.in/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pharma2tech.in/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharma2tech.in/careers.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharma2tech.in/services.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharma2tech.in/internships.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharma2tech.in/leadership.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharma2tech.in/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
