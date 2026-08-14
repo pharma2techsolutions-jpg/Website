@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pharma2tech.in/sitemap.xml
