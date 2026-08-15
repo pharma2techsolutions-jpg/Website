@@ -597,6 +597,28 @@
     <!-- Main Content Section -->
     <section class="section">
 
+        <!-- Active Internships List Header (Top Section) -->
+        <div class="section-title" style="text-align: left;">
+            <h2>Available Internship Openings</h2>
+            <p>Live internships updated directly from our academic portal</p>
+        </div>
+
+        <!-- Active Internships Container (Google Sheet Dynamic Fetch) -->
+        <div id="activeInternshipsContainer" class="internships-container" style="margin-bottom: 70px;">
+            <div style="text-align: center; padding: 40px; background: var(--white); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                <i class="fa-solid fa-spinner fa-spin" style="font-size: 2.2rem; color: var(--accent-teal);"></i>
+                <p style="margin-top: 12px; color: var(--text-muted); font-weight: 500;">Loading live internship opportunities...</p>
+            </div>
+        </div>
+
+        <!-- Closed Internships Section -->
+        <div id="closedInternshipsWrapper" style="margin-bottom: 70px; display: none;">
+            <div class="section-title" style="text-align: left; margin-bottom: 25px;">
+                <h3 style="color: var(--text-muted); font-weight: 700;">Past / Closed Internship Batches</h3>
+            </div>
+            <div id="closedInternshipsContainer" class="internships-container"></div>
+        </div>
+
         <!-- Target Qualification Cards -->
         <div class="section-title">
             <h2>Who Can Apply For Our Internships?</h2>
@@ -633,28 +655,6 @@
                 </div>
                 <div class="feature-banner-img"></div>
             </div>
-        </div>
-
-        <!-- Active Internships List Header -->
-        <div class="section-title" style="text-align: left;">
-            <h2>Available Internship Openings</h2>
-            <p>Live internships updated directly from our academic portal</p>
-        </div>
-
-        <!-- Active Internships Container -->
-        <div id="activeInternshipsContainer" class="internships-container">
-            <div style="text-align: center; padding: 40px; background: var(--white); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
-                <i class="fa-solid fa-spinner fa-spin" style="font-size: 2.2rem; color: var(--accent-teal);"></i>
-                <p style="margin-top: 12px; color: var(--text-muted); font-weight: 500;">Loading live internship opportunities...</p>
-            </div>
-        </div>
-
-        <!-- Closed Internships Section -->
-        <div id="closedInternshipsWrapper" style="margin-top: 60px; display: none;">
-            <div class="section-title" style="text-align: left; margin-bottom: 25px;">
-                <h3 style="color: var(--text-muted); font-weight: 700;">Past / Closed Internship Batches</h3>
-            </div>
-            <div id="closedInternshipsContainer" class="internships-container"></div>
         </div>
 
     </section>
