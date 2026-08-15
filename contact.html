@@ -220,29 +220,23 @@
         /* Main Contact Layout */
         .section {
             padding: 70px 20px;
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        /* Quick Social Contact Cards */
-        .contact-info-wrapper {
+        .contact-grid-single {
+            max-width: 950px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 20px;
         }
 
         .contact-card {
             background: var(--white);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
-            padding: 22px 26px;
+            padding: 24px 30px;
             box-shadow: var(--card-shadow);
             display: flex;
             align-items: center;
@@ -255,22 +249,23 @@
         .contact-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-blue);
         }
 
         .card-left {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 20px;
         }
 
         .card-icon {
-            width: 54px;
-            height: 54px;
+            width: 58px;
+            height: 58px;
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             color: var(--white);
             flex-shrink: 0;
         }
@@ -282,63 +277,65 @@
         .icon-email { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
 
         .card-details h4 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--primary-navy);
             margin-bottom: 2px;
         }
 
         .card-details p {
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             color: var(--text-muted);
             font-weight: 500;
         }
 
         .action-arrow {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
             transition: 0.3s;
         }
 
         .contact-card:hover .action-arrow {
             color: var(--accent-blue);
-            transform: translateX(5px);
+            transform: translateX(6px);
         }
 
         /* Direct WhatsApp Callout Banner */
         .wa-banner {
             background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);
             border-radius: var(--border-radius);
-            padding: 28px;
+            padding: 35px 30px;
             color: var(--white);
             box-shadow: 0 12px 28px rgba(18, 140, 126, 0.25);
-            margin-top: 5px;
+            margin-top: 10px;
+            text-align: center;
         }
 
         .wa-banner h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
         }
 
         .wa-banner p {
-            font-size: 0.92rem;
+            font-size: 1rem;
             color: #E2E8F0;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             line-height: 1.6;
         }
 
         .btn-wa-direct {
             background: #25D366;
             color: var(--white);
-            padding: 12px 26px;
+            padding: 14px 32px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 1rem;
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -350,87 +347,6 @@
             background: #1ebc5a;
             transform: translateY(-2px);
             box-shadow: 0 10px 22px rgba(37, 211, 102, 0.6);
-        }
-
-        /* Contact Form Container */
-        .form-card {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--card-shadow);
-        }
-
-        .form-card h3 {
-            font-size: 1.6rem;
-            color: var(--primary-navy);
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .form-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary-navy);
-            margin-bottom: 8px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 13px 18px;
-            border: 1.5px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-main);
-            outline: none;
-            transition: 0.3s ease;
-            background: #FAFAFA;
-        }
-
-        .form-control:focus {
-            border-color: var(--accent-blue);
-            background: var(--white);
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 110px;
-        }
-
-        .btn-submit-form {
-            width: 100%;
-            background: linear-gradient(135deg, var(--accent-blue) 0%, #1D4ED8 100%);
-            color: var(--white);
-            padding: 14px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-submit-form:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.45);
         }
 
         /* FAQ Section */
@@ -507,9 +423,7 @@
 
         @media (max-width: 900px) {
             nav ul { display: none; }
-            .contact-grid { grid-template-columns: 1fr; }
             .page-banner h1 { font-size: 2.2rem; }
-            .form-card { padding: 25px; }
         }
     </style>
 </head>
@@ -541,7 +455,7 @@
                 </ul>
             </nav>
 
-            <a href="index.html#apply" class="btn-guidance">Get Free Guidance</a>
+            <a href="https://wa.me/919272329762?text=Hello%20Pharma2Tech%20Systems,%20I%20want%20career%20guidance." target="_blank" class="btn-guidance">Get Free Guidance</a>
         </div>
     </header>
 
@@ -558,134 +472,90 @@
 
     <!-- Main Contact Section -->
     <section class="section">
-        <div class="contact-grid">
-            
-            <!-- Left Side: Call, WhatsApp & Social Links -->
-            <div class="contact-info-wrapper">
+        <div class="contact-grid-single">
 
-                <!-- Direct Call Button Card -->
-                <a href="tel:+919272329762" class="contact-card">
-                    <div class="card-left">
-                        <div class="card-icon icon-call">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Direct Phone Call</h4>
-                            <p>+91 9272329762</p>
-                        </div>
+            <!-- Direct Phone Call Card (No Visible Phone Number) -->
+            <a href="tel:+919272329762" class="contact-card">
+                <div class="card-left">
+                    <div class="card-icon icon-call">
+                        <i class="fa-solid fa-phone-volume"></i>
                     </div>
-                    <i class="fa-solid fa-chevron-right action-arrow"></i>
-                </a>
-
-                <!-- WhatsApp Card -->
-                <a href="https://wa.me/919272329762?text=Hello%20Pharma2Tech%20Systems,%20I%20want%20more%20details%20about%20your%20programs." target="_blank" class="contact-card">
-                    <div class="card-left">
-                        <div class="card-icon icon-wa">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>WhatsApp Chat</h4>
-                            <p>+91 9272329762</p>
-                        </div>
+                    <div class="card-details">
+                        <h4>Direct Voice Call</h4>
+                        <p>Click here to speak with our career counselor directly</p>
                     </div>
-                    <i class="fa-solid fa-chevron-right action-arrow"></i>
-                </a>
-
-                <!-- Instagram Card -->
-                <a href="https://www.instagram.com/pharma2tech_systems" target="_blank" class="contact-card">
-                    <div class="card-left">
-                        <div class="card-icon icon-insta">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Instagram</h4>
-                            <p>@pharma2tech_systems</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right action-arrow"></i>
-                </a>
-
-                <!-- LinkedIn Card -->
-                <a href="https://www.linkedin.com/company/pharma2tech-systems" target="_blank" class="contact-card">
-                    <div class="card-left">
-                        <div class="card-icon icon-linkedin">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>LinkedIn Profile</h4>
-                            <p>Pharma2Tech Systems</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right action-arrow"></i>
-                </a>
-
-                <!-- Official Email Card -->
-                <a href="mailto:info@pharma2tech.in" class="contact-card">
-                    <div class="card-left">
-                        <div class="card-icon icon-email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Official Email</h4>
-                            <p>info@pharma2tech.in</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right action-arrow"></i>
-                </a>
-
-                <!-- Direct WhatsApp Banner -->
-                <div class="wa-banner">
-                    <h3><i class="fa-brands fa-whatsapp"></i> Instant Counseling Support</h3>
-                    <p>Want direct career guidance or internship assistance? Connect with us on WhatsApp right away!</p>
-                    <a href="https://wa.me/919272329762?text=Hello%20Pharma2Tech%20Systems,%20I%20need%20immediate%20career%20guidance." target="_blank" class="btn-wa-direct">
-                        Chat On WhatsApp <i class="fa-solid fa-paper-plane"></i>
-                    </a>
                 </div>
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+            </a>
 
-            </div>
-
-            <!-- Right Side: Contact Form -->
-            <div class="form-card">
-                <h3>Send Us A Inquiry</h3>
-                <p>Fill out your details below and our team will get in touch with you shortly.</p>
-
-                <form id="contactForm" onsubmit="handleContactSubmit(event)">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+            <!-- WhatsApp Card (No Visible Phone Number) -->
+            <a href="https://wa.me/919272329762?text=Hello%20Pharma2Tech%20Systems,%20I%20want%20more%20details%20about%20your%20programs." target="_blank" class="contact-card">
+                <div class="card-left">
+                    <div class="card-icon icon-wa">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </div>
-
-                    <div class="form-group">
-                        <label for="phone">WhatsApp / Contact Number *</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="e.g. 9876543210" required>
+                    <div class="card-details">
+                        <h4>WhatsApp Chat</h4>
+                        <p>Click here to chat instantly with our support team</p>
                     </div>
+                </div>
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+            </a>
 
-                    <div class="form-group">
-                        <label for="qualification">Qualification *</label>
-                        <select id="qualification" class="form-control" required>
-                            <option value="" disabled selected>Select Your Qualification</option>
-                            <option value="B.Pharm">B.Pharm</option>
-                            <option value="M.Pharm">M.Pharm</option>
-                            <option value="Pharm.D">Pharm.D</option>
-                            <option value="B.Sc / M.Sc">B.Sc / M.Sc Life Sciences</option>
-                            <option value="Other">Other</option>
-                        </select>
+            <!-- Instagram Card -->
+            <a href="https://www.instagram.com/pharma2tech_systems" target="_blank" class="contact-card">
+                <div class="card-left">
+                    <div class="card-icon icon-insta">
+                        <i class="fa-brands fa-instagram"></i>
                     </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message / Question *</label>
-                        <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+                    <div class="card-details">
+                        <h4>Instagram Page</h4>
+                        <p>Follow us for latest updates, events & student success stories</p>
                     </div>
+                </div>
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+            </a>
 
-                    <button type="submit" class="btn-submit-form" id="submitBtn">
-                        Submit Inquiry <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/company/pharma2tech-systems" target="_blank" class="contact-card">
+                <div class="card-left">
+                    <div class="card-icon icon-linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="card-details">
+                        <h4>LinkedIn Network</h4>
+                        <p>Connect with our corporate network & placement partners</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+            </a>
+
+            <!-- Official Email Card -->
+            <a href="mailto:info@pharma2tech.in" class="contact-card">
+                <div class="card-left">
+                    <div class="card-icon icon-email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="card-details">
+                        <h4>Official Email Support</h4>
+                        <p>Send us your detailed queries or institutional collaboration proposals</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+            </a>
+
+            <!-- Direct WhatsApp Banner -->
+            <div class="wa-banner">
+                <h3><i class="fa-brands fa-whatsapp"></i> Instant Counseling Support</h3>
+                <p>Want direct career guidance or internship assistance? Connect with us on WhatsApp right away!</p>
+                <a href="https://wa.me/919272329762?text=Hello%20Pharma2Tech%20Systems,%20I%20need%20immediate%20career%20guidance." target="_blank" class="btn-wa-direct">
+                    Chat On WhatsApp <i class="fa-solid fa-paper-plane"></i>
+                </a>
             </div>
 
         </div>
 
-        <!-- Added Frequently Asked Questions Section -->
+        <!-- Frequently Asked Questions Section -->
         <div class="faq-section">
             <div class="faq-title">
                 <h2>Frequently Asked Questions</h2>
@@ -718,26 +588,5 @@
         <p class="footer-slogan">Where Pharmacy Meets Technology</p>
     </footer>
 
-    <script>
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            const submitBtn = document.getElementById('submitBtn');
-            const name = document.getElementById('fullName').value;
-            const phone = document.getElementById('phone').value;
-            const qualification = document.getElementById('qualification').value;
-            const msg = document.getElementById('message').value;
-
-            // Directing data via WhatsApp for fastest response
-            const waText = `Hello Pharma2Tech Systems,%0A%0A*New Website Inquiry:*%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Qualification:* ${encodeURIComponent(qualification)}%0A- *Message:* ${encodeURIComponent(msg)}`;
-            
-            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Redirecting...';
-            
-            setTimeout(() => {
-                window.open(`https://wa.me/919272329762?text=${waText}`, '_blank');
-                submitBtn.innerHTML = 'Submit Inquiry <i class="fa-solid fa-paper-plane"></i>';
-                document.getElementById('contactForm').reset();
-            }, 800);
-        }
-    </script>
 </body>
 </html>
