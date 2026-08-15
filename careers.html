@@ -605,6 +605,28 @@
     <!-- Main Content Section -->
     <section class="section">
 
+        <!-- Job Openings Header (Top Section) -->
+        <div class="section-title" style="text-align: left;">
+            <h2>Current Job Openings</h2>
+            <p>Explore active career opportunities directly updated from our central dashboard</p>
+        </div>
+
+        <!-- Active Openings Container (Google Sheet Dynamic Fetch) -->
+        <div id="activeJobsContainer" class="jobs-container" style="margin-bottom: 70px;">
+            <div style="text-align: center; padding: 40px; background: var(--white); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                <i class="fa-solid fa-spinner fa-spin" style="font-size: 2.2rem; color: var(--accent-blue);"></i>
+                <p style="margin-top: 12px; color: var(--text-muted); font-weight: 500;">Loading real-time career opportunities...</p>
+            </div>
+        </div>
+
+        <!-- Closed Openings Section -->
+        <div id="closedJobsWrapper" style="margin-bottom: 70px; display: none;">
+            <div class="section-title" style="text-align: left; margin-bottom: 25px;">
+                <h3 style="color: var(--text-muted); font-weight: 700;">Past / Closed Openings</h3>
+            </div>
+            <div id="closedJobsContainer" class="jobs-container"></div>
+        </div>
+
         <!-- Culture & Motivation Cards -->
         <div class="section-title">
             <h2>Why Work At Pharma2Tech Systems?</h2>
@@ -646,28 +668,6 @@
                 </div>
                 <div class="join-banner-img"></div>
             </div>
-        </div>
-
-        <!-- Job Openings Header -->
-        <div class="section-title" style="text-align: left;">
-            <h2>Current Job Openings</h2>
-            <p>Explore active career opportunities directly updated from our central dashboard</p>
-        </div>
-
-        <!-- Active Openings Container -->
-        <div id="activeJobsContainer" class="jobs-container">
-            <div style="text-align: center; padding: 40px; background: var(--white); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
-                <i class="fa-solid fa-spinner fa-spin" style="font-size: 2.2rem; color: var(--accent-blue);"></i>
-                <p style="margin-top: 12px; color: var(--text-muted); font-weight: 500;">Loading real-time career opportunities...</p>
-            </div>
-        </div>
-
-        <!-- Closed Openings Section -->
-        <div id="closedJobsWrapper" style="margin-top: 60px; display: none;">
-            <div class="section-title" style="text-align: left; margin-bottom: 25px;">
-                <h3 style="color: var(--text-muted); font-weight: 700;">Past / Closed Openings</h3>
-            </div>
-            <div id="closedJobsContainer" class="jobs-container"></div>
         </div>
 
     </section>
