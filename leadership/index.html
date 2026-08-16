@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1350, initial-scale=0.3, maximum-scale=1.0">
+    <title>Leadership</title>
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1blEzFYMEcGMd-YliwW8eANmVbh2o4_91">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 900px)">
+    
+    <style>
+        :root {
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --primary-navy: #0F172A;
+            --accent-blue: #2563EB;
+            --accent-teal: #059669;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            background-image: 
+                linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+            background-size: 32px 32px;
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            text-decoration: none;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 65px;
+            width: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.08));
+        }
+
+        .brand-box:hover .brand-logo {
+            transform: scale(1.05) rotate(-1deg);
+            filter: drop-shadow(0px 6px 14px rgba(37, 99, 235, 0.25));
+        }
+
+        .pulse-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-teal);
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            right: -4px;
+            box-shadow: 0 0 0 rgba(5, 150, 105, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(5, 150, 105, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.1;
+            letter-spacing: -0.4px;
+        }
+
+        .logo-title span {
+            color: var(--accent-blue);
+        }
+
+        .logo-slogan {
+            font-size: 0.7rem;
+            color: var(--accent-teal);
+            letter-spacing: 0.6px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-blue);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background-color: var(--accent-blue);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .btn-guidance {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, #1D4ED8 100%);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Hero Banner Section */
+        .page-banner {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1E293B 100%);
+            color: var(--white);
+            padding: 70px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+            animation: rotateBg 20s linear infinite;
+        }
+
+        @keyframes rotateBg {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .page-banner h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-banner p {
+            font-size: 1.15rem;
+            color: #94A3B8;
+            line-height: 1.7;
+        }
+
+        .badge {
+            background: rgba(37, 99, 235, 0.15);
+            color: #60A5FA;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        /* Section Global */
+        .section {
+            padding: 70px 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Leadership Cards Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .leader-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12);
+        }
+
+        .leader-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            background: #E2E8F0;
+            overflow: hidden;
+        }
+
+        .leader-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.5s ease;
+        }
+
+        .leader-card:hover .leader-img {
+            transform: scale(1.04);
+        }
+
+        .leader-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, transparent 100%);
+            padding: 30px 25px 15px 25px;
+            color: var(--white);
+        }
+
+        .leader-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 2px;
+            color: var(--white);
+        }
+
+        .leader-role {
+            font-size: 0.95rem;
+            color: #60A5FA;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .leader-body {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .leader-quote {
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1rem;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 20px;
+            border-left: 4px solid var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .leader-bio {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .leader-socials {
+            display: flex;
+            gap: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-light);
+            color: var(--primary-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .social-link:hover {
+            background: var(--accent-blue);
+            color: var(--white);
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Vision & Mission Highlight Section */
+        .vision-mission-wrapper {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--white);
+            border-radius: 24px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .vm-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease;
+        }
+
+        .vm-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(37, 99, 235, 0.4);
+        }
+
+        .vm-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-blue), #1D4ED8);
+            color: var(--white);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .vm-card h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .vm-card p {
+            color: #CBD5E1;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Core Leadership Principles */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .principle-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .principle-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--accent-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 18px auto;
+        }
+
+        .principle-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .principle-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer .footer-slogan {
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            nav ul { display: none; }
+            .leadership-grid { grid-template-columns: 1fr; }
+            .vm-grid { grid-template-columns: 1fr; }
+            .page-banner h1 { font-size: 2.2rem; }
+            .vision-mission-wrapper { padding: 30px 20px; }
+            .leader-img-wrapper { height: 320px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-box">
+                <div class="logo-wrapper">
+                    <img src="https://lh3.googleusercontent.com/d/1blEzFYMEcGMd-YliwW8eANmVbh2o4_91" alt="Pharma2Tech Logo" class="brand-logo" onerror="this.src='https://via.placeholder.com/85?text=P2T'">
+                    <div class="pulse-dot"></div>
+                </div>
+                <div class="brand-text">
+                    <div class="logo-title">Pharma2Tech <span>Systems</span></div>
+                    <div class="logo-slogan">Where Pharmacy Meets Technology</div>
+                </div>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/" class="active">About Us</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/leadership/">Leadership</a></li>
+                    <li><a href="/careers/">Careers</a></li>
+                    <li><a href="/internships/">Internships</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <a href="index.html#apply" class="btn-guidance">Get Free Guidance</a>
+        </div>
+    </header>
+
+    <!-- Page Hero Banner -->
+    <div class="page-banner">
+        <div class="banner-content">
+            <span class="badge">Visionary Leadership</span>
+            <h1>Guided by Innovation & Purpose</h1>
+            <p>Meet the leaders shaping the future of Healthcare Technology by bridging academic knowledge with corporate excellence.</p>
+        </div>
+    </div>
+
+    <!-- Leadership Profiles Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Executive Leadership</h2>
+            <p>Driving transformation across Pharmaceutical Sciences & Corporate IT</p>
+        </div>
+
+        <div class="leadership-grid">
+            
+            <!-- Leader 1: Managing Director -->
+            <div class="leader-card">
+                <div class="leader-img-wrapper">
+                    <img src="https://lh3.googleusercontent.com/d/1eQLvNctquANFliX4OXfwpgs4nLG214AU" alt="Mr. Rushikesh V. Raje" class="leader-img">
+                    <div class="leader-overlay">
+                        <div class="leader-name">Mr. Rushikesh V. Raje</div>
+                        <div class="leader-role">Managing Director</div>
+                    </div>
+                </div>
+                <div class="leader-body">
+                    <div>
+                        <div class="leader-quote">
+                            "Technology isn't just an addition to healthcare—it's the foundation of modern drug safety and patient care."
+                        </div>
+                        <p class="leader-bio">
+                            With a strong background in Pharmacy and Healthcare IT, Mr. Rushikesh V. Raje leads Pharma2Tech Systems with a strategic vision to empower young professionals. Under his leadership, the organization has built seamless bridges between pharmacy graduates and top-tier global IT infrastructure.
+                        </p>
+                    </div>
+                    <div class="leader-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:contact@pharma2tech.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 2: Co-Founder & COO -->
+            <div class="leader-card">
+                <div class="leader-img-wrapper">
+                    <img src="https://lh3.googleusercontent.com/d/163A8sUmTKeHii5tIQKDIQrCuywSXOsJ0" alt="Ms. Saee S. Gade" class="leader-img">
+                    <div class="leader-overlay">
+                        <div class="leader-name">Ms. Saee S. Gade</div>
+                        <div class="leader-role">Co-Founder & COO</div>
+                    </div>
+                </div>
+                <div class="leader-body">
+                    <div>
+                        <div class="leader-quote">
+                            "Excellence in execution turns academic capability into true corporate innovation."
+                        </div>
+                        <p class="leader-bio">
+                            Ms. Saee S. Gade oversees organizational operations, curriculum standards, and corporate talent alignment. Her focus on operational excellence ensures that every student and client receives world-class mentorship, practical skill enhancement, and direct industry exposure.
+                        </p>
+                    </div>
+                    <div class="leader-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:contact@pharma2tech.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Inspirational Vision & Mission Block -->
+        <div class="vision-mission-wrapper">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="badge" style="background: rgba(255,255,255,0.1); color: #93C5FD; border-color: rgba(255,255,255,0.2);">Our Driving Force</span>
+                <h2 style="font-size: 2.2rem; font-weight: 800;">Strategic Direction & Purpose</h2>
+            </div>
+            
+            <div class="vm-grid">
+                <!-- Vision Card -->
+                <div class="vm-card">
+                    <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be the global benchmark in integrating Pharmaceutical Excellence with Information Technology, building a future where every healthcare professional is equipped to drive digital health innovations, drug safety, and medical data precision worldwide.
+                    </p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="vm-card">
+                    <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To eliminate the divide between academic learning and industry expectations by providing state-of-the-art virtual internships, hands-on software training, and expert career guidance in Pharmacovigilance, CDM, and Healthcare IT.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Leadership Values -->
+        <div style="margin-top: 70px;">
+            <div class="section-title">
+                <h2>Our Guiding Leadership Values</h2>
+                <p>The principles that define our work culture and student mentorship</p>
+            </div>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4>Innovation First</h4>
+                    <p>Continuously integrating modern IT methodologies into clinical and pharmaceutical processes.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4>Empowering Youth</h4>
+                    <p>Transforming students into industry-ready leaders through mentorship and real-world tools.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Uncompromised Quality</h4>
+                    <p>Maintaining regulatory standards (USFDA, EMA, GCP) across all our programs and solutions.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h4>Ethical Excellence</h4>
+                    <p>Building long-term trust with students, academic institutes, and corporate partners.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pharma2Tech Systems Career Catalyst Pvt Ltd. All Rights Reserved.</p>
+        <p class="footer-slogan">Where Pharmacy Meets Technology</p>
+    </footer>
+
+</body>
+</html>
