@@ -5,27 +5,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pharma2tech.in/about.html</loc>
+    <loc>https://pharma2tech.in/about/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pharma2tech.in/careers.html</loc>
+    <loc>https://pharma2tech.in/careers/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pharma2tech.in/services.html</loc>
+    <loc>https://pharma2tech.in/services/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pharma2tech.in/internships.html</loc>
+    <loc>https://pharma2tech.in/internships/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pharma2tech.in/leadership.html</loc>
+    <loc>https://pharma2tech.in/leadership/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pharma2tech.in/contact.html</loc>
+    <loc>https://pharma2tech.in/contact/</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
